@@ -87,8 +87,8 @@ int main()
         Mat image = imread("/content/Parallel-Histogram-Equalization/sequential/img/tree1.jpg", CV_LOAD_IMAGE_COLOR);
 
         // namedWindow("Original Image");
-        resize(image, image, Size(300, 400), INTER_NEAREST);
         // imshow("Original Image", image);
+        resize(image, image, Size(12000, 12000), INTER_NEAREST);
 
         double start = omp_get_wtime();
 
@@ -107,9 +107,9 @@ int main()
         cout << end - start << endl;
 
         // Display equalized image
-        namedWindow("Equalized Image");
-        resize(image, image, Size(800, 800));
+        // namedWindow("Equalized Image");
         // imshow("Equalized Image", image);
+        resize(image, image, Size(800, 800));
         imwrite("/content/Parallel-Histogram-Equalization/sequential/output.jpg", image);
         waitKey();
 

@@ -100,9 +100,9 @@ int main()
         // Mat image = imread("../img/gigante.jpg");
         Mat image = imread("/content/Parallel-Histogram-Equalization/OMP/img/gigante.jpg");
 
-        namedWindow("Original Image");
-        resize(image, image, Size(800, 600));
-        imshow("Original Image", image);
+        // namedWindow("Original Image");
+        resize(image, image, Size(12000, 12000));
+        // imshow("Original Image", image);
 
         double start = omp_get_wtime();
 
@@ -121,9 +121,9 @@ int main()
         cout << end - start << endl;
 
         // Display equalized image
-        namedWindow("Equalized Image");
-        resize(image, image, Size(800, 600));
+        // namedWindow("Equalized Image");
         // imshow("Equalized Image", image);
+        resize(image, image, Size(800, 600));
         imwrite("/content/Parallel-Histogram-Equalization/OMP/output.jpg", image);
 
         waitKey();
