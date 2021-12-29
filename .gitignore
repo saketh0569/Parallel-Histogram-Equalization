@@ -1,4 +1,8 @@
 report/
 sample/
 results/
-code/CUDA/Debug
+CUDA/Debug
+OMP/.idea
+sequential/.idea
+OMP/cmake-build-debug
+sequential/cmake-build-debug
