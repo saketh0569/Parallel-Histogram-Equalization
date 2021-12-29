@@ -20,7 +20,6 @@ void make_histogram(Mat image, int histogram[], int yuv_vector[])
         {
                 for (int j = 0; j < image.cols; j++)
                 {
-
                         Vec3b intensity = image.at<Vec3b>(i, j);
 
                         int R = intensity.val[0];

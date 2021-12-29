@@ -141,8 +141,8 @@ int main()
         gettimeofday(&end, NULL);
 
         double elapsed = ((end.tv_sec - start.tv_sec) * 1000 + (end.tv_usec - start.tv_usec) / 1000) / 1.e3;
-        cout << elapsed;
-        cout << "correctly freed memory \n";
+        cout << elapsed << endl;
+        cout << "correctly freed memory" << endl;
 
         Mat final_image = Mat(Size(width, height), CV_8UC3, host_image);
 
@@ -150,7 +150,7 @@ int main()
         string save_image_path = "desk.jpg";
 
         imwrite(save_folder_path + save_image_path, final_image); // save equalized RGB image
-        cout << "correctly saved image";
+        cout << "correctly saved image" << endl;
 
         return 0;
 }
