@@ -9,7 +9,6 @@ using namespace cv;
 
 void make_histogram(Mat image, int histogram[], int yuv_vector[])
 {
-
         // initialize all intensity values to 0
         for (int i = 0; i < 256; i++)
         {
