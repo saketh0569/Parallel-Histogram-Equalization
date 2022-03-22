@@ -1,3 +1,4 @@
 report/
 sample/
-*.out
+# *.out
+code.cpp

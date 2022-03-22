@@ -20,7 +20,6 @@ void make_histogram(Mat image, int histogram[], int yuv_vector[])
                 {
                         for (int j = 0; j < image.cols; j++)
                         {
-
                                 Vec3b intensity = image.at<Vec3b>(i, j);
 
                                 int R = intensity.val[0];
@@ -105,7 +104,6 @@ int main()
         // imshow("Original Image", image);
 
         double start = omp_get_wtime();
-
         int *yuv_vector = new int[image.rows * image.cols * 3];
 
         // Generate the histogram
