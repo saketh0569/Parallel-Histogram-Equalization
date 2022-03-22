@@ -97,7 +97,7 @@ int main()
 {
         // Load the image
         // Mat image = imread("../img/gigante.jpg");
-        Mat image = imread("/content/Parallel-Histogram-Equalization/OMP/img/gigante.jpg");
+        Mat image = imread("/content/Parallel-Histogram-Equalization/OMP/img/gigante.jpg"); // taking the input image
 
         // namedWindow("Original Image");
         resize(image, image, Size(12000, 12000));
@@ -122,7 +122,7 @@ int main()
         // namedWindow("Equalized Image");
         // imshow("Equalized Image", image);
         resize(image, image, Size(800, 600));
-        imwrite("/content/Parallel-Histogram-Equalization/OMP/output.jpg", image);
+        imwrite("/content/Parallel-Histogram-Equalization/OMP/output.jpg", image); // storing the output image
 
         waitKey();
         return 0;

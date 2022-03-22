@@ -73,7 +73,7 @@ __global__ void YUV2RGB(unsigned char *image, int *cumulative_dist, int *histogr
 int main()
 {
         string folder_path = "/content/Parallel-Histogram-Equalization/CUDA/images/";
-        string image_path = "tree.jpg";
+        string image_path = "tree.jpg"; // taking the input here
 
         Mat image = imread(folder_path + image_path); // load the image
         Size size(100, 100);
@@ -147,7 +147,7 @@ int main()
         Mat final_image = Mat(Size(width, height), CV_8UC3, host_image);
 
         string save_folder_path = "/content/Parallel-Histogram-Equalization/CUDA/";
-        string save_image_path = "desk.jpg";
+        string save_image_path = "output.jpg";
 
         imwrite(save_folder_path + save_image_path, final_image); // save equalized RGB image
         cout << "correctly saved image" << endl;

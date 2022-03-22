@@ -82,7 +82,7 @@ int main()
 {
         // Load the image
         // Mat image = imread("../img/tree1.jpg", CV_LOAD_IMAGE_COLOR);
-        Mat image = imread("/content/Parallel-Histogram-Equalization/sequential/img/tree1.jpg", CV_LOAD_IMAGE_COLOR);
+        Mat image = imread("/content/Parallel-Histogram-Equalization/sequential/img/tree1.jpg", CV_LOAD_IMAGE_COLOR); // taking the input image here
 
         // namedWindow("Original Image");
         // imshow("Original Image", image);
@@ -108,7 +108,7 @@ int main()
         // namedWindow("Equalized Image");
         // imshow("Equalized Image", image);
         resize(image, image, Size(800, 800));
-        imwrite("/content/Parallel-Histogram-Equalization/sequential/output.jpg", image);
+        imwrite("/content/Parallel-Histogram-Equalization/sequential/output.jpg", image); // storing the output image here
         waitKey();
 
         return 0;
